@@ -1,21 +1,23 @@
-import React from 'react'
+import React from 'react';
+import css from 'components/FeedbackOptions/FeedbackOptions.module.css';
 
-const FeedbackOptions = ({options,onLeaveFeedback}) => {
-    return (
-        <div>
-            {options.map((option) => (
-                       <button
-                           type='submit'
-                           key={option}
-                           onClick={() => {
-                               onLeaveFeedback(option);
-                           }}
-                       >
-                           {option}
-                       </button>
-                   ))}
-  </div>
-  )
-}
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  return (
+    <div className={css.container}>
+      {options.map(option => (
+        <button
+          className={css.btn}
+          type="submit"
+          key={option}
+          onClick={() => {
+            onLeaveFeedback(option);
+          }}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
+  );
+};
 
-export default FeedbackOptions
+export default FeedbackOptions;
