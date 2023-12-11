@@ -4,8 +4,7 @@ import css from 'components/Section/Section.module.css';
 const Section = ({ title, children }) => {
   return (
     <h3 className={css.title}>
-      {' '}
-      {title} {children}{' '}
+      {title} {children}
     </h3>
   );
 };
